@@ -4,7 +4,7 @@ import streamlit.components.v1 as components
 
 # ── レイアウト & グローバル CSS ───────────────────────
 st.set_page_config(page_title="car-tinder", page_icon="🚗", layout="centered")
-components.html(\"\"\"
+components.html("""
 <style>
 :root {
   --bg-main: #000;
@@ -140,7 +140,7 @@ progress::-webkit-progress-value {
 
 </style>
 <header>car-tinder</header>
-\"\"\", height=0, scrolling=False)
+""", height=0, scrolling=False)
 
 # ── DB 接続 & Session 初期化 ───────────────────────
 con = sqlite3.connect("cars.db", check_same_thread=False)
